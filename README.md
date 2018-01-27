@@ -1,21 +1,21 @@
-# react-date-selector
+# react-calendar-date-selector
 
 A simple date selector for input fields in React projects.
 
 ## Installation
 
   ```bash
-  npm install react-date-selector --save
+  npm install react-calendar-date-selector --save
   ```
   or
   ```bash
-  yarn add react-date-selector
+  yarn add react-calendar-date-selector
   ```
 
 ## Usage
 
 ```js
-import DateSelector from 'react-date-selector'
+import DateSelector from 'react-calendar-date-selector'
 
 class App extends Component {
   render() {
