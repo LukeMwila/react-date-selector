@@ -1,6 +1,6 @@
 {
   "name": "react-calendar-date-selector",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple date selector for input fields in React projects.",
   "main": "build/index.js",
   "peerDependencies": {

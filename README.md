@@ -18,10 +18,24 @@ A simple date selector for input fields in React projects.
 import DateSelector from 'react-calendar-date-selector'
 
 class App extends Component {
+  constructor () {
+    super()
+    this.state = {
+      chosenDate: ''
+    }
+    this.selectDate = this.selectDate.bind(this)
+  }
+
+  selectDate (e, date) {
+    e.preventDefault()
+    console.log(date)
+    this.setState({ chosenDate: date  })
+  }
+
   render() {
     return (
-      <div>
-        <DateSelector />
+      <div className='App'>
+        <DateSelector selectDate={this.selectDate} chosenDate={this.state.chosenDate} />
       </div>
     );
   }
@@ -38,3 +52,5 @@ CSS class names should be applied to the classNames property.
 | Props              | Default values | Possible values                          |
 | -------------------| --------------| ------------------------------------------|
 | classNames         | none          | string                                    |
+| chosendate         | none          | string                                    |
+| selectDate         | none          | function                                  |

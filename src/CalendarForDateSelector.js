@@ -4,6 +4,7 @@
  import MonthDates from './MonthDates'
  import DateSelectorOverlay from './DateSelectorOverlay'
  import CalendarContainer from './CalendarContainer'
+ import Ionicon from 'react-ionicons'
  import moment from 'moment'
  import classnames from 'classnames'
  import PropTypes from 'prop-types'
@@ -68,6 +69,7 @@
        <div className={classes}>
          <DateSelectorOverlay>
            <CalendarContainer>
+             <div onClick={this.props.closeCalendar} className='close-btn pointer'><Ionicon icon="md-close" fontSize="55px" color="#fff"/></div>
              <Months month={this.state.monthName} year={this.state.currentYear} nextMonth={this.nextMonth} previousMonth={this.previousMonth} />
              <DaysOfWeek daysOfWeek={this.state.daysOfWeek} />
              <MonthDates selectDate={this.props.selectDate} currentDate={this.state.currentDate} currentMonth={this.state.currentMonth} currentYear={this.state.currentYear} />
